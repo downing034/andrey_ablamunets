@@ -12,6 +12,8 @@
  *
  */
 @import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
 @import url('https://fonts.googleapis.com/css?family=Exo+2:400,800');
 
 /* Universal Colors */
@@ -101,10 +103,11 @@ p {
 
 /* Sidebar Styles*/
 
-#follow-me-container {
+#sidebar-container {
   border-radius: 0px;
   border: none;
   background: #f7f7f7;
+  margin-bottom: 20px;
   h3 {
     padding-bottom: 10px;
     border-bottom: 5px solid #dfdfdf;
@@ -121,6 +124,15 @@ p {
   width: 95%;
   height: 43px;
   margin-bottom: 25px;
+}
+
+.sidebar-sm-icons a {
+  display: inline-block;
+  display: -moz-inline-box;
+  *display: inline; /* For IE7 */
+  zoom: 1; /* Trigger hasLayout */
+  width: 24%;
+  text-align: center;
 }
 
 /* About Page Styling */
