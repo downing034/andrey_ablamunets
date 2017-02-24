@@ -5,12 +5,13 @@
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    = favicon_link_tag 'favicon.ico'
   %body
     = render template: 'shared/navbar'
-    .container-fluid
+    .container-fluid#main-content
       .row
         .col-md-10.col-md-offset-1
-          .col-md-7
+          .col-md-6.col-md-offset-1
             = yield
-          .col-md-3
-            SIDEBAR CONTENT HERE
+          .col-md-4
+            = render template: 'shared/sidebar'

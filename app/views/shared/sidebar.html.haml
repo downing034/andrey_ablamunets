@@ -1,0 +1,36 @@
+.well#sidebar-container
+  %h3 FOLLOW MY BLOG
+  %p Enter your email address to follow this blog and receive notifications of new posts by email.
+
+  %input{ type: 'text', name: 'email', placeholder: 'Enter your email address', id: 'subscribe-field' }
+  %input{ type: 'submit', value: 'FOLLOW', class: 'btn btn-green'}
+
+.well#sidebar-container
+  %h3 FIND ME ON SOCIAL MEDIA
+  .sidebar-sm-icons
+    %a{:href => "https://www.facebook.com/facebook.com/ablamunets", :title => "facebook"}
+      %i.fa.fa-facebook-official.fa-2x{:style => "margin-right: 0.5em; color: #d12d00;"}
+    %a{:href => "https://twitter.com/twitter.com/ablamunetsand", :title => "twitter"}
+      %i.fa.fa-twitter.fa-2x{:style => "margin-right: 0.5em; color: #d12d00;"}
+    %a{:href => "https://instagram.com/ablamunetsand", :title => "instagram"}
+      %i.fa.fa-instagram.fa-2x{:style => "margin-right: 0.5em; color: #d12d00;"}
+    %a{:href => "https://www.youtube.com/channel/UCNmSPhSCbzWb0oVUJcXrNHQ", :title => "instagram"}
+      %i.fa.fa-youtube-play.fa-2x{:style => "margin-right: 0.5em; color: #d12d00;"}
+
+.well#sidebar-container
+  %h3 INSTAGRAM
+
+.well#sidebar-container
+  %h3 TWITTER MACHINE
+  %a.twitter-timeline{href: "https://twitter.com/AblamunetsAnd", 'data-tweet-limit' => '3' }
+  %script{:async => "", :charset => "utf-8", :src => "//platform.twitter.com/widgets.js"}
+
+
+.well#sidebar-container
+  = image_tag('bib-rave-circle-badge.jpg')
+
+.well#sidebar-container
+  %h3 ANDREY'S BLOG
+
+.well#sidebar-container
+  %h3 CATEGORIES
