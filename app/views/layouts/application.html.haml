@@ -7,4 +7,10 @@
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
     = render template: 'shared/navbar'
-    = yield
+    .container-fluid
+      .row
+        .col-md-10.col-md-offset-1
+          .col-md-7
+            = yield
+          .col-md-3
+            SIDEBAR CONTENT HERE
