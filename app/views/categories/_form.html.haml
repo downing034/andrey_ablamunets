@@ -1,0 +1,12 @@
+= form_for @category do |f|
+  .form-group
+    = f.label :name
+    = f.text_field :name, class: 'form-control'
+
+  .row
+    .col-md-6
+      .form-group
+        = f.submit 'Save', class: 'btn btn-green align-left'
+
+    .col-md-6
+      = link_to 'Delete Category', category_path(@category), method: :delete, data: { confirm: 'Are you sure you want to delte this category?' }, class: 'btn btn-danger align-right' unless @category.new_record?
