@@ -30,11 +30,28 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 800;
 }
 
+ul.unstyle-list {
+  padding-left: 0px;
+  li {
+    list-style: none;
+  }
+}
+
 .btn {
+  border-radius: 2px;
+  box-shadow: 0 1px 1px 0 rbga(0, 0, 0, .1);
+  cursor: pointer;
+  display: inline-block;
   font-family: 'Exo 2', sans-serif;
-  letter-spacing: 2px;
+  font-size: 16px;
   font-weight: bold;
-  border-radius: 0px;
+  letter-spacing: 2px;
+  overflow: visible;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .btn-green {
@@ -42,8 +59,25 @@ h1, h2, h3, h4, h5, h6 {
   color: white;
 }
 
+.align-right {
+  float: right;
+}
+
+.align-left {
+  float: left;
+}
+
 body {
   font-family: 'Exo 2', sans-serif;
+}
+
+thead {
+  background-color: $dark-green;
+  th {
+    color: white;
+    letter-spacing: 2px;
+    font-size: 20px;
+  }
 }
 
 h1 {
@@ -129,10 +163,15 @@ p {
 .sidebar-sm-icons a {
   display: inline-block;
   display: -moz-inline-box;
-  *display: inline; /* For IE7 */
   zoom: 1; /* Trigger hasLayout */
   width: 24%;
   text-align: center;
+}
+
+i.category-folder {
+  &:hover {
+    color: $dark-green;
+  }
 }
 
 /* About Page Styling */
