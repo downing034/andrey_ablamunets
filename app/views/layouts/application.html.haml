@@ -11,4 +11,6 @@
     .container-fluid#main-content
       .row
         .col-md-10.col-md-offset-1
+          - flash.each do |key, value|
+            = content_tag :div, value, class: "alert alert-#{key}"
           = yield
