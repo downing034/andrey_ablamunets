@@ -35,7 +35,10 @@
 
   .well#sidebar-container
     %h3
-      = link_to 'CATEGORIES', categories_path
+      - if user_signed_in? && current_user.internal?
+        = link_to 'CATEGORIES', categories_path
+      - else
+        CATEGORIES
     %h4
       %ul.unstyle-list
         - Category.all.each do |category|

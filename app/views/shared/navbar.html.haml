@@ -9,6 +9,9 @@
             = link_to 'RUNNING DISCOUNT CODES', href: '#'
           %li
             = link_to 'ABOUT ME', about_path
+          - if user_signed_in? && current_user.internal?
+            %li
+              = link_to 'CATEGORIES', categories_path
         #main-nav-collapse.collapse.navbar-collapse
           %ul.nav.navbar-nav.navbar-right
             - if user_signed_in?
