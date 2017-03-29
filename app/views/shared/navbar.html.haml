@@ -9,11 +9,20 @@
             = link_to 'RUNNING DISCOUNT CODES', href: '#'
           %li
             = link_to 'ABOUT ME', about_path
-        .navbar-right
-          - if user_signed_in?
-            = button_to 'Sign Out', destroy_user_session_path, method: :delete, class: 'btn btn-danger', id: 'navbar-button'
-          - else
-            = link_to 'Log In', new_user_session_path, class: 'btn btn-green', id: 'navbar-button'
+        #main-nav-collapse.collapse.navbar-collapse
+          %ul.nav.navbar-nav.navbar-right
+            - if user_signed_in?
+              %li
+                = link_to "My Profile", edit_user_registration_path
+              %li
+                = button_to "Sign Out", destroy_user_session_path, method: :delete, class: 'btn btn-danger navbar-button'
+            - else
+              = link_to "Log In", new_user_session_path, class: 'btn btn-green navbar-button'
+
+
+
+
+
 .jumbotron#nav-banner
   %h1 ANDREY ABLAMUNETS
   %p RUNNING THE WORLD

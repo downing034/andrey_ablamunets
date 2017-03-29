@@ -23,7 +23,6 @@ $dark-green: #4a7776;
 $dark-red: #d12d00;
 $green-button: #00787a;
 
-
 /* Universal Styles */
 h1, h2, h3, h4, h5, h6 {
   color: $dark-green;
@@ -57,7 +56,6 @@ ul.unstyle-list {
 
 .btn-green {
   background-color: $green-button;
-  color: white;
 }
 
 .align-right {
@@ -106,6 +104,7 @@ p {
   background-color: $navbar-brand-background;
   border-radius: 0px;
   margin-bottom: 0px;
+  height: 50px;
   line-height: 1.8;
   width: 100%;
   a {
@@ -116,6 +115,7 @@ p {
 
 #nav-container {
   padding: 0px;
+  height: 50px;
 }
 
 #nav-banner {
@@ -136,8 +136,9 @@ p {
   }
 }
 
-#navbar-button {
-  margin-top: 10px;
+.navbar-button {
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 /* Sidebar Styles*/
