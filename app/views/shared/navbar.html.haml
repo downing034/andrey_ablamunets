@@ -12,6 +12,8 @@
           - if user_signed_in? && current_user.internal?
             %li
               = link_to 'CATEGORIES', categories_path
+            %li
+              = link_to 'MANAGE POSTS', posts_path
         #main-nav-collapse.collapse.navbar-collapse
           %ul.nav.navbar-nav.navbar-right
             - if user_signed_in?

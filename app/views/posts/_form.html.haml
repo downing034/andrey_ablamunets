@@ -1,0 +1,25 @@
+= form_for @post do |f|
+  .form-group
+    = f.label :title
+    = f.text_field :title, class: 'form-control'
+
+  .form-group
+    = f.label :body, 'Content'
+    = f.text_area :body, id: 'editor', class: 'form-control'
+
+  .row
+    .col-md-6
+      .form-group
+        = f.submit 'Save', class: 'btn btn-green align-left'
+
+    .col-md-6
+      = link_to 'Delete Post', post_path(@post), method: :delete, data: { confirm: 'Are you sure you want to delte this category?' }, class: 'btn btn-danger align-right' unless @post.new_record?
+
+:javascript
+  $('#editor').froalaEditor({
+    inlineMode: false,
+    heightMin: '200px',
+    toolbarButtons: ['bold', 'italic', 'underline', 'formatBlock', 'align',
+    'insertUnorderedList', 'insertOrderedList', 'outdent', 'indent',
+    'createLink', 'html'],
+  })

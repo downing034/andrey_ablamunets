@@ -1,5 +1,11 @@
 .col-md-6
-  %h1 StaticPages#home
-  %p Find me in app/views/static_pages/home.html.haml
+  - if @posts.any?
+    - @posts.each do |post|
+      .post-container
+        %h2
+          = post.title
 
+        = post.body.html_safe
+  - else
+    %h3 There are currently no posts!
 = render template: 'shared/sidebar'
