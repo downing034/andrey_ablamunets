@@ -19,7 +19,6 @@ gem 'sass-rails', '~> 5.0'
 gem 'haml-rails', '~> 0.9'
 gem 'font-awesome-sass', '~> 4.7.0'
 gem 'devise', '~> 4.2'
-gem "rails_admin"
 gem 'wysiwyg-rails'
 gem 'sanitize'
 gem 'rubocop'
